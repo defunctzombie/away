@@ -1,0 +1,38 @@
+{
+  "name": "away",
+  "version": "0.0.0",
+  "description": "detect when a user is idle on a page",
+  "main": "index.js",
+  "dependencies": {
+    "xtend": "2.0.3"
+  },
+  "devDependencies": {
+    "synthetic-dom-events": "~0.0.0",
+    "zuul": "~0.0.6",
+    "mocha": "~1.8.1"
+  },
+  "scripts": {
+    "test": "zuul --ui tdd test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shtylman/away.git"
+  },
+  "keywords": [
+    "idle"
+  ],
+  "testling": {
+    "browsers": [
+      "ie/7..latest",
+      "firefox/3.6",
+      "firefox/15..latest",
+      "chrome/4",
+      "chrome/20..latest",
+      "safari/5.1..latest"
+    ],
+    "harness": "mocha-tdd",
+    "files": "test.js"
+  },
+  "author": "Roman Shtylman <shtylman@gmail.com>",
+  "license": "MIT"
+}
