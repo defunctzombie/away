@@ -1,6 +1,6 @@
 {
   "name": "away",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "detect when a user is idle on a page",
   "main": "index.js",
   "dependencies": {
