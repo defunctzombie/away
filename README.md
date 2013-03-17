@@ -2,7 +2,7 @@
 
 detect idle users on webpages
 
-[![browser support](http://ci.testling.com/shtylman/away.png)](http://ci.testling.com/shtylman/away)
+[![browser support](https://ci.testling.com/shtylman/away.png)](https://ci.testling.com/shtylman/away)
 
 ```js
 var away = require('away');
