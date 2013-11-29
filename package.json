@@ -8,11 +8,11 @@
   },
   "devDependencies": {
     "synthetic-dom-events": "~0.0.0",
-    "zuul": "~0.0.6",
-    "mocha": "~1.8.1"
+    "zuul": "~1.0.4"
   },
   "scripts": {
-    "test": "zuul --ui tdd test.js"
+    "test": "zuul test.js",
+    "test-local": "zuul --local 8080 test.js"
   },
   "repository": {
     "type": "git",
@@ -21,18 +21,6 @@
   "keywords": [
     "idle"
   ],
-  "testling": {
-    "browsers": [
-      "ie/7..latest",
-      "firefox/3.6",
-      "firefox/15..latest",
-      "chrome/4",
-      "chrome/20..latest",
-      "safari/5.1..latest"
-    ],
-    "harness": "mocha-tdd",
-    "files": "test.js"
-  },
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "license": "MIT"
 }
