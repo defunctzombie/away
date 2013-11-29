@@ -1,8 +1,6 @@
-# away
+# away [![Build Status](https://travis-ci.org/defunctzombie/away.png?branch=master)](https://travis-ci.org/defunctzombie/away)
 
 detect idle users on webpages
-
-[![browser support](https://ci.testling.com/shtylman/away.png)](https://ci.testling.com/shtylman/away)
 
 ```js
 var away = require('away');
