@@ -50,7 +50,7 @@ Whether to start idle timer upon creation. (default ```true```)
 ## install
 
 ```
-npm isnstall away
+npm install away
 ```
 
 ## credits
