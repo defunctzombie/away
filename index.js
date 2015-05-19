@@ -22,7 +22,6 @@ var defaults = {
 };
 
 var Idle = function(opt) {
-  console.log('opt', opt);
     var self = this;
 
     self.opt = xtend(defaults, opt);
@@ -35,8 +34,6 @@ var Idle = function(opt) {
         idle_fn: [],
         active_fn: []
     };
-
-    console.log('state', self.state);
 
     // wrapper to pass state to toggleState
     self.state.state_fn = function() {
