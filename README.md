@@ -33,7 +33,7 @@ Start the idle timer. (By default the idle timer is started automatically)
 
 ## options
 
-```idle()``` accepts a second argument with additional options.
+```away()``` accepts a second argument with additional options.
 
 ### element
 The dom element to monitor for activity. (default ```document```)
@@ -46,6 +46,9 @@ String of DOM events that will trigger activity. (see index.js for default)
 
 ### start
 Whether to start idle timer upon creation. (default ```true```)
+
+### idle
+Start in idle state. (default ```false```)
 
 ## install
 
