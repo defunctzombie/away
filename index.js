@@ -1,11 +1,14 @@
 var xtend = require('xtend');
 
-module.exports = function(timeout) {
-    return new Idle({ timeout: timeout });
+module.exports = function(timeout, opt) {
+    var options = xtend({ timeout: timeout }, opt);
+    return new Idle(options);
 };
 
 // default settings
 var defaults = {
+    // initial state
+    idle: false,
     //start as soon as timer is set up
     start: true,
     // timer is enabled
@@ -34,7 +37,10 @@ var Idle = function(opt) {
 
     // wrapper to pass state to toggleState
     self.state.state_fn = function() {
-        toggleState(self.state);
+        // never change to active state on timeout
+        if (!self.state.idle) {
+          toggleState(self.state);
+        }
     };
 
     if (self.opt.start) {
