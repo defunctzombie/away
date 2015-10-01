@@ -1,7 +1,14 @@
 var xtend = require('xtend');
 
-module.exports = function(timeout, opt) {
-    var options = xtend({ timeout: timeout }, opt);
+module.exports = function(optOrTimeout) {
+    var options = {};
+
+    if (typeof optOrTimeout === 'number') {
+      options.timeout = optOrTimeout; 
+    } else if (typeof optOrTimeout === 'object') {
+      options = optOrTimeout; 
+    }
+
     return new Idle(options);
 };
 

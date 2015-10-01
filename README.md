@@ -33,7 +33,9 @@ Start the idle timer. (By default the idle timer is started automatically)
 
 ## options
 
-```away()``` accepts a second argument with additional options.
+```away(number/object options)``` 
+
+The `options` argument is a number (timeout in ms) or an object with properties:
 
 ### element
 The dom element to monitor for activity. (default ```document```)
