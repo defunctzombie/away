@@ -1,11 +1,21 @@
 var xtend = require('xtend');
 
-module.exports = function(timeout) {
-    return new Idle({ timeout: timeout });
+module.exports = function(optOrTimeout) {
+    var options = {};
+
+    if (typeof optOrTimeout === 'number') {
+      options.timeout = optOrTimeout; 
+    } else if (typeof optOrTimeout === 'object') {
+      options = optOrTimeout; 
+    }
+
+    return new Idle(options);
 };
 
 // default settings
 var defaults = {
+    // initial state
+    idle: false,
     //start as soon as timer is set up
     start: true,
     // timer is enabled
