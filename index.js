@@ -37,7 +37,10 @@ var Idle = function(opt) {
 
     // wrapper to pass state to toggleState
     self.state.state_fn = function() {
-        toggleState(self.state);
+        // never change to active state on timeout
+        if (!self.state.idle) {
+          toggleState(self.state);
+        }
     };
 
     if (self.opt.start) {
